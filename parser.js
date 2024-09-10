@@ -5,7 +5,7 @@ let pythonArr = pythonCode.split("\n");
 
 let methods = [];
 let main = [];
-
+const varSet = new Set();
 
 
 const parseMethod = (start) => {
