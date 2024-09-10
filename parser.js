@@ -1,41 +1,12 @@
-const pythonCode = `
-def check_even_numbers(numbers):
-    even_numbers = []
-    for number in numbers:
-        if number % 2 == 0:
-            even_numbers.append(number)
-    return even_numbers
-
-def func(foo, bar):
-    print(foo + bar)
-
-numbers_list = [1, 2, 3, 4, 5, 6]
-result = check_even_numbers(numbers_list)
-print("Even numbers are:", result)
-`;
-
+import Method from "./structures/method.js";
+import pythonCode from "./python.js";
 
 let pythonArr = pythonCode.split("\n");
 
 let methods = [];
 let main = [];
 
-class Method {
-	constructor(name, params, code) {
-		this.name = name;
-		this.params = params;
-		this.code = code;
-	}
 
-	toJSON() {
-		return {
-			"name": this.name,
-			"params": this.params,
-			"code": this.code,
-		}
-	}
-	
-}
 
 const parseMethod = (start) => {
 	let name;
